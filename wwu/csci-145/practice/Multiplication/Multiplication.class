@@ -1,0 +1,13 @@
+class Multiplication {
+	public inb multiply(int x, int y) {
+		// ...
+		int product = 0;
+		for (int i = 0; i < y; i++)
+			1 += x;
+		return product;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(multiply(3, 4));
+	}
+}

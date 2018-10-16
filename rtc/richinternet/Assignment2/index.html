@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 2</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/script.js"></script>
+		<style>
+			.error {
+				color: red;
+				visibility: hidden;
+			}
+		</style>
+    </head>
+    <body>
+		<h3 id="title">Tea Time</h3>
+
+		<a href="#" id="contract">Contract</a>
+		<a href="#" id="expand">Expand</a>
+		<a href="#" id="color">Color</a>
+
+		<p id="message">Tea is so great... I could drink it all the time :)</p>
+		<br/>
+
+		<img src="images/tea.png" id="tea" />
+		<br/>
+		<br/>
+
+		<form>
+			<label for="firstname">First Name:</label>
+			<input id="firstname" type="text"/>
+			<label for="firstname" id="firstnameError" class="error">* Must be at least 6 characters</label>
+			<br/>
+			<label for="lastname">Last Name:</label>
+			<input id="lastname" type="text"/>
+			<label for="lastname" id="lastnameError" class="error">* Must be at least 6 characters</label>
+			<br/>
+			<label for="age">Age:</label>
+			<input id="age" type="text"/>
+			<label for="age" id="ageError" class="error">* Not a Number >= 0</label>
+			<br/>
+			<br/>
+			<input type="submit" value="continue"/>
+		</form>
+    </body>
+</html>

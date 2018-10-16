@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		<script>
+			// Define a literal object
+			var person = {
+				firstName: "Will",
+				lastName: "Boatright",
+				age: 18,
+				phone: "867-5309",
+				myFunction: function () {
+					// code here
+				}
+			};
+			// I can print my name
+			document.write(person.firstName + " " + person.lastName + "<br/>");
+			
+			// add a property to the object
+			person.address = "61 Cygni Ave.";
+			delete person.age;
+			for (prop in person) {
+				document.write(prop + ": " + person[prop] + "<br/>");
+			}
+
+			person.getName = function () {
+				return this.firstName + " " + this.lastName;
+			};
+			document.write(person.getName() + "<br/>");
+
+			// using a constructor
+			function Student (fname, lname, age) {
+				this.firstName = fname;
+				this.lastName = lname;
+				this.age = age;
+				this.getInfo = function () {
+					return fname + " " + lname + " " + age;
+				};
+			}
+
+			// create an instance
+			var student1 = new Student("John", "Doe", 25);
+			var age = student1.age;
+		</script>
+    </body>
+</html>

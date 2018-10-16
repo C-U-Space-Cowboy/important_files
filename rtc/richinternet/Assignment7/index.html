@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Assignment 7</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/controller.js"></script>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body ng-app="groceryList">
+		<div ng-controller="formController" ng-init=> 
+			<form name="myForm">
+				<p>Email: <input type="email" name="email" ng-model="email" required>
+					<span ng-show="myForm.email.$touched && myForm.email.$invalid">Email required</span>
+				</p>
+				<p>First Name: <input type="text" name="name" ng-model="name" required>
+					<span ng-show="myForm.name.$touched && myForm.name.$invalid">Name Required</span>
+				</p>
+				<p>Phone: <input type="text" name="phone" ng-model="phone" required>
+					<span ng-show="myForm.phone.$touched && myForm.phone.$invalid">Phone Number Required</span>
+				</p>
+				<button ng-disabled="myForm.$invalid" ng-click="showList = true">Submit</button>
+			</form>
+			<table ng-show="showList">
+				<tr>
+					<th>Item</th>
+					<th>Amount</th>
+					<th>Price</th>
+					<th>Total</th>
+				</tr>
+				<tr ng-repeat="grocery in groceries">
+					<td>{{grocery.name}}</td>
+					<td>{{grocery.amount}}</td>
+					<td>{{grocery.price}}</td>
+					<td>{{grocery.amount * grocery.price}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

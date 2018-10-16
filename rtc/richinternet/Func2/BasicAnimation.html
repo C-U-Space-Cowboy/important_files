@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+		<script src="../jquery-3.3.1.min.js"></script>
+		<script>
+			$(() => { // load code (before the page) using lambda notation
+				// JQuery code should be in this function'
+			})
+
+			function hidePara() {
+				//$("#para").hide();
+				//$("#para").fadeOut(3000);
+				$("#para").fadeTo(2000, 0.3); // duration, opacity
+			}
+
+			function showPara() {
+				//$("#para").show();
+				$("#para").fadeIn(3000);
+			}
+
+			function slideListUp() { // Collapse
+				$("#blist").slideUp();
+			}
+
+			function slideListDown() { // Expand
+				$("#blist").slideDown();
+			}
+		</script>
+    </head>
+    <body>
+		<!-- <p id="para">Welcome to JavaScript Class!</p> -->
+		<h3>Breakfast List</h3>
+		<ul id="blist">
+			<li>Milk</li>
+			<li>Cereal</li>
+			<li>Chocolate</li>
+			<li>Cake</li>
+			<li>Coffee</li>
+		</ul>
+		<input type="button" value="Collapse List" onclick="slideListUp();" />
+		<input type="button" value="Expand List" onclick="slideListDown();" />
+    </body>
+</html>

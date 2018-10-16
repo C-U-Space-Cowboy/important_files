@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="css/flick/jquery-ui-1.10.3.custom.min.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#hats").accordion({
+				collapsible:true,
+				active:false
+			});
+		});
+		
+		//make it so no tab is opened by default
+		//and make it so you can close the open tab without
+		//needing to click a different tab
+	</script>
+</head>
+
+<body>
+	<div id="hats">
+    	<h3><a href="#baseball">Baseball Hat</a></h3>
+        <div id="baseball">
+        	<p>
+            	I love baseball hats.  I wear them everyday.
+                YAY!  for baseball!
+            </p>
+        </div>
+        <h3><a href="#beret">Beret</a></h3>
+        <div id="beret">
+        	<p>
+            	oh... je suis french.
+            </p>
+        </div>
+        <h3><a href="#cowboy">Cowboy Hat</a></h3>
+        <div id="cowboy">
+        	<p>
+            	I love cows
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

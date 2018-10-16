@@ -1,0 +1,25 @@
+[
+	{
+		"Name" : "Mohamed Zerrouki",
+		"StudentID" : 101,
+		"Percentage" : "80%"
+	},
+
+	{
+		"Name" : "Spongebob SquarePants",
+		"StudentID" : 201,
+		"Percentage" : "70%"
+	},
+
+	{
+		"Name" : "James Bond",
+		"StudentID" : 191,
+		"Percentage" : "75%"
+	},
+
+	{
+		"Name" : "Lhoucine Zerrouki",
+		"StudentID" : 111,
+		"Percentage" : "77%"
+	}
+]

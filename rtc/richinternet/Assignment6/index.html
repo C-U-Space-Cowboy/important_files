@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Angular JS Controller Practice</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/js.js"></script>
+	</head>
+	<body ng-app="myModule" ng-controller="myController">
+		Store name:
+		<input type="text" ng-model="usertext.storename" />
+		<div>My shopping list from: {{usertext.storename|uppercase}}</div>
+		<br/>
+		Search:
+		<input type="text" ng-model="usertext.search"/>
+		<div ng-repeat="grocery in groceries | filter : {'item': usertext.search}">
+			{{grocery.category}} | {{grocery.item}} - Price: {{grocery.price | currency}}
+		</div>
+		<br/>
+		<button ng-click="changeGroceryCategory()">Oh wait, I want organic!</button>
+	</body>
+</html>

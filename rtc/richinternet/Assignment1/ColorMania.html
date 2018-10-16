@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Colormania</title>
+    <script>
+		username = prompt("Enter your name:");
+
+		function changeBg(bgRequest) {
+			document.body.style.background = bgRequest.color;
+			alert(bgRequest.username + ", the new background color is " + bgRequest.color + ".");
+		}
+
+		function bgRequest(username, color) {
+			this.username = username;
+			this.color = color;
+		}
+    </script>
+</head>
+<body>
+    <form>
+		<input type="button" value="Red" onclick="changeBg(new bgRequest(username, 'red'))" />
+		<input type="button" value="Green" onclick="changeBg(new bgRequest(username, 'green'))" />
+		<input type="button" value="Blue" onclick="changeBg(new bgRequest(username, 'blue'))" />
+		<input type="button" value="Orange" onclick="changeBg(new bgRequest(username, 'orange'))" />
+		<input type="button" value="Custom" onclick="changeBg(new bgRequest(username, prompt('Custom color:')))" />
+    </form>
+</body>
+</html>

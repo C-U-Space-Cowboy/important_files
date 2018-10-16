@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 3</title>
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#tabs").tabs();
+				$("#date").datepicker();
+				$("#message").dialog({
+					autoOpen: false
+				});
+				$("#dialog").click(function() {$("#message").dialog("open")});
+				$("#image").draggable();
+			});
+		</script>
+    </head>
+    <body>
+		<div id="tabs">
+			<ul>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#drag">Drag</a></li>
+			</ul>
+
+			<div id="info">
+				<h3>Let's learn more about you :)</h3>
+				<form>
+					Favorite Food: <input type="text"/> <input type="button" value="..." id="dialog"/>
+					<div title="Favorite Foods" id="message">
+						Just say the first thing that comes to your mind. I won't judge you :)
+					</div>
+					<br/>
+					Date: <input type="text" id="date"/>
+				</form>
+			</div>
+			<div id="drag">
+				<h3>Let's drag stuff :)</h3>
+				<img src="images/strawberry.jpg" id="image"/>
+			</div>
+		</div>
+    </body>
+</html>

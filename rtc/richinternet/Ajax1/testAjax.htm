@@ -1,0 +1,59 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function getRequestObject()
+		{
+			var reqObj;
+			try
+			{
+				// Firefox, Opera 8.0+, Safari
+				reqObj = new XMLHttpRequest();
+			}
+			catch (e)
+			{
+				// Internet Explorer
+				try
+				{
+					reqObj = new ActiveXObject("Msxml2.XMLHTTP");
+				}
+				catch (e)
+				{
+					try
+					{
+						reqObj = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch (e)
+					{
+						alert("Your browser does not support AJAX!");
+						return false;
+					}
+				}
+			}
+
+			//Set the onreadystatechange function
+			reqObj.onreadystatechange = function()
+			{
+				if(reqObj.readyState == 4)
+					document.myForm.time.value = reqObj.responseText;
+			}	  
+			  
+			//Open the connection
+			reqObj.open("GET", "time.php", true);
+			
+			//Send the request
+			reqObj.send(null);
+		}
+	</script>
+</head>
+	<body>
+		<p>Try the AJAX application by typing some text
+		into the Name text box below:</p>
+		<form name="myForm">
+			Name:
+			<input type="text" name="username"
+			onchange="getRequestObject();"  />
+			Time:
+			<input type="text" name="time" />
+		</form>
+	</body>
+</html>

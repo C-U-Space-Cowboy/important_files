@@ -1,0 +1,14 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Angular JS Controller Practice</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/js.js"></script>
+	</head>
+	<body ng-app="myModule" ng-controller="myController">
+		<div ng-include="'store.html'"></div>
+		<div ng-include="'search.html'"></div>
+		<br/>
+		<button ng-click="changeGroceryCategory()">Oh wait, I want organic!</button>
+	</body>
+</html>

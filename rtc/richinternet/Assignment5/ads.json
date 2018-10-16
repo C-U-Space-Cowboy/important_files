@@ -1,0 +1,28 @@
+[
+	{
+		"name": "Porsche Bike",
+		"description": "A bike with a brand name!",
+		"price": 10000,
+		"image": "bike.jpg"
+	}, {
+		"name": "Pretty Shoes",
+		"description": "Come to our shoe store",
+		"price": 54.45,
+		"image": "shoes.jpg"
+	}, {
+		"name": "Pie Fest!",
+		"description": "Oh yeah this is officially the best pie ever",
+		"price": 3.45,
+		"image": "pie.jpg"
+	}, {
+		"name": "Inside Out Umbrella",
+		"description": "Designer Umbrellas for low cost",
+		"price": 14.55,
+		"image": "umbrella.jpg"
+	}, {
+		"name": "Coffee",
+		"description": "Come get your morning dessert",
+		"price": 4.59,
+		"image": "coffee.jpg"
+	}
+]

@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Ice Cream",
+		"amount": 1,
+		"price": 4.95
+	},
+	{
+		"name": "Bananas",
+		"amount": 1,
+		"price": 5.95
+	},
+	{
+		"name": "Chocolate Syrup",
+		"amount": 1,
+		"price": 3.99
+	},
+	{
+		"name": "Tortilla Chips",
+		"amount": 1,
+		"price": 7.97
+	},
+	{
+		"name": "Shredded Cheese",
+		"amount": 1,
+		"price": "4.90"
+	},
+	{
+		"name": "Lettuce",
+		"amount": 1,
+		"price": 2.70
+	},
+	{
+		"name": "Tomato",
+		"amount": 2,
+		"price": 0.70
+	},
+	{
+		"name": "Croutons",
+		"amount": 1,
+		"price": 3.95
+	}
+]

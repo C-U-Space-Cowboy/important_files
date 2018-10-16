@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+		<style>
+			p.striped
+			{
+				color: #00ff21;
+			}
+		</style>
+		<script src="../jquery-3.3.1.min.js"></script>
+		<script>
+			function myCheckedBoxes() {
+				// get the list of checked boxes
+				var checkedBoxes = $("input:checked");
+				var text = "";
+				//alert("Checked: " + checkedBoxes.length);
+				for (var i = 0; i < checkedBoxes.length; i++) {
+					text += checkedBoxes[i].value + " ";
+				}
+				alert(text);
+			}
+
+			function colorMe() {
+				// select the paragraph element
+				//$("#toChange").css({
+				//	"color": "red",
+				//	"font-size": "60px"
+				//});
+				$("#toChange").toggleClass("striped");
+				$("p:contains('class')").text("My programming Course");
+			}
+
+			function sayHi() {
+				alert("HI!!!");
+			}
+
+			function sayBye() {
+				alert("BYE!!!");
+			}
+
+			$(function () {
+				$("#MyButton").hover(sayHi, sayBye);
+			});
+		</script>
+    </head>
+    <body>
+		<p id="toChange">My Programming Class</p>
+		<form>
+			<input type="checkbox" value="red" />Red <br/>
+			<input type="checkbox" value="green" />Green <br/>
+			<input type="checkbox" value="blue" />Blue <br/>
+			<input type="button" id="MyButton" value="Change Color" />
+		</form>
+    </body>
+</html>

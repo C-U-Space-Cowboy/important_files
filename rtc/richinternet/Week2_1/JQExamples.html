@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+		<script src="../jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+		<p id="demo">Hello World</p>
+		<p>Second Example</p>
+		<script>
+			// this prevents JQuery code from running before the html document is loaded
+			//$(document).ready(function () {
+				
+			//});
+
+			// better syntax, abbreviated
+			$(function () {		
+				// put your JQuery code here.
+				$("p").click(function () {
+					$(this).css("color", "red");
+				});
+				//document.getElementById("demo").innerHTML = "<strong>HELLO WORLD</strong>";
+				$("#demo").html("<strong>HELLO</strong>");
+				$("p").replaceAll("Hello");
+			});	
+		</script>
+    </body>
+</html>

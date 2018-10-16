@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="css/flick/jquery-ui-1.10.3.custom.min.css">
+    <style>
+		#square {
+			background:skyblue;
+			width:150px;
+			font-size:32px;
+			position:relative;
+			padding:20px;	
+		}
+	</style>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+		$(function(){	//on page load
+			//make the square draggable
+			$("#square").draggable().resizable();
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="square">
+    	<p>Move me!</p>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

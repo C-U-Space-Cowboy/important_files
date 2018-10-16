@@ -1,0 +1,30 @@
+<html ng-app = "assignment4">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 4</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="ads.json"></script>
+    </head>
+    <body ng-controller="autocomplete">
+		<h3>What Product Would you Like?</h3>
+		<form action="details.php" method="get">
+			<input type="text" name="search" ng-model="search"/>
+			<br/>
+			<br/>
+			Suggestion:
+			<br/>
+			<p ng-repeat="product in products | filter : {'name': search}">{{product.name}}</p>
+			<br/>
+			<input type="submit" value="show details"/>
+		</form>
+		<script>
+			var app = angular.module('assignment4', []);
+			app.controller('autocomplete', function ($scope) {
+				$.getJSON('ads.json', function (json) {
+					$scope.products = json;
+				});
+			});
+		</script>
+    </body>
+</html>

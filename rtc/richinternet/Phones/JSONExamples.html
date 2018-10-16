@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+		<link rel="stylesheet" href="../jquery-ui.min.css">
+		<script src="../jquery-3.3.1.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+    </head>
+    <body>
+		<script>
+			fetch('phones.json')
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				console.log(data);
+			});
+//			.catch(function (error) {
+//				
+//			})
+		</script>
+    </body>
+</html>

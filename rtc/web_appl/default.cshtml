@@ -1,0 +1,93 @@
+﻿
+@functions {
+    decimal CalCavg()
+    {
+        decimal r = Convert.ToDecimal(Request.QueryString["restime"]); ;
+        decimal e = Convert.ToDecimal(Request.QueryString["ease"]); ;
+        decimal i = Convert.ToDecimal(Request.QueryString["interactive"]);
+        decimal u = Convert.ToDecimal(Request.QueryString["useful"]);
+
+
+        return ((r + e + i + u) / 4);
+
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #tb1 th {
+            padding: 10px;
+            color: maroon;
+        }
+
+        #tb1 td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="1">
+        <tr><td colspan=2><h5>The feedback we received was: </h5></td></tr>
+        <tr><td width=50% align=right>Response Time was rated as =>></td><td> <font color=red size=3>@Request.QueryString["restime"]</font></td></tr>
+        <br />
+        <tr><td width=45% align=right>Ease of Use was rated as =>> </td><td> <font color=red size=3>@Request.QueryString["ease"]</font></td></tr>
+        <tr><td width=45% align=right>Interactivity was rated as =>> </td><td><font color=red size=3>@Request.QueryString["interactive"]</font></td></tr>
+        <tr><td width=45% align=right>Usefulness was rated as =>> </td><td><font color=red size=3>@Request.QueryString["useful"]</font></td></tr>
+        <tr><td width=45% align=right>Additional Comments =>></td><td>@Request.QueryString["taFeedBack"]</td></tr>
+        <tr><td colspan=2><hr><h5>Your overall satisfaction level is <font color=red size=3>@CalCavg()</font> in a range of 1 to 4...</h5></td></tr>
+        <tr><td colspan=2>Feedback was received at: @DateTime.Now.ToString()</td></tr>
+    </table>
+
+    <form id="form1" method="get" action="">
+
+        <h3>Please select a response for each question!</h3>
+        <table id="tb1">
+            <tr>
+                <th>Description</th>
+                <th>Poor</th>
+                <th>OK</th>
+                <th>Good</th>
+                <th>Excellent</th>
+                <th>Additional Comments:</th>
+            </tr>
+
+            <tr>
+                <td>Response Time</td>
+                <td><input type="radio" name="restime" value="1" /></td>
+                <td><input type="radio" name="restime" value="2" /></td>
+                <td><input type="radio" name="restime" value="3" /></td>
+                <td><input type="radio" name="restime" value="4" /></td>
+                <td rowspan="4"><textarea rows="6" cols="20" name="tafeedback"></textarea></td>
+            </tr>
+            <tr>
+                <td>Ease of Use</td>
+                <td><input type="radio" name="ease" value="1" /></td>
+                <td><input type="radio" name="ease" value="2" /></td>
+                <td><input type="radio" name="ease" value="3" /></td>
+                <td><input type="radio" name="ease" value="4" /></td>
+            </tr>
+            <tr>
+                <td>Interactivity</td>
+                <td><input type="radio" name="interactive" value="1" /></td>
+                <td><input type="radio" name="interactive" value="2" /></td>
+                <td><input type="radio" name="interactive" value="3" /></td>
+                <td><input type="radio" name="interactive" value="4" /></td>
+            </tr>
+            <tr>
+                <td>Usefulness</td>
+                <td><input type="radio" name="useful" value="1" /></td>
+                <td><input type="radio" name="useful" value="2" /></td>
+                <td><input type="radio" name="useful" value="3" /></td>
+                <td><input type="radio" name="useful" value="4" /></td>
+            </tr>
+        </table>
+        <br />
+        <input type="submit" value="Send Your Feedback" name="fsubmit" onclick="return fsubmit_onclick()" />
+
+    </form>
+</body>
+</html>

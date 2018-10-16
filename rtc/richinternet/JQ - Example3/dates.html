@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="css/flick/jquery-ui-1.10.3.custom.min.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+		$(function(){	//on page load
+			$("#my-date").datepicker({
+				onSelect:displayDate
+			});	
+		});
+		
+		function displayDate(dateText)
+		{
+			$("#result").html(dateText);	
+		}
+	</script>
+</head>
+<body>
+	<label>
+    	Select a date:
+        <input type="text" id="my-date" />
+    </label>
+    
+    <h3>You picked:</h3>
+    <p id="result"></p>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
